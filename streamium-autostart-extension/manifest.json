@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Google Hangout Keep Online",
+  "version": "1.5.1",
+  "description": "Auto-join Google Hangout when entering its URL & presses \"I am not sleeping\" time to time.",
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": [
+    "tabs",
+    "*://streamium.io/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://streamium.io/*"],
+      "js" : ["streamium.user.js"]
+    }
+  ]
+}
